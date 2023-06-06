@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { ApiType } from "../../models/api.type";
-import { modifyUser } from "./user.slices";
 
 export const ApiEmptyState : ApiType = {
+    id: 0,
     name: '',
     gender: '',
     status: '',
@@ -13,7 +13,8 @@ export const apiSlice = createSlice({
     initialState: ApiEmptyState,
     reducers: {
         createApi: (state, action) => {
-            return action.payload;
+            const response = action.payload
+            return response;
         },
         modifyApi: (state, action) => ({ ...state, ...action.payload }),
         resetApi: () => ApiEmptyState,
