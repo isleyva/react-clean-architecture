@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { ApiType } from "../../models/api.type";
+import { ApiType } from "../../../models/api.type";
 
 export const ApiEmptyState : ApiType = {
     id: 0,

@@ -1,16 +1,16 @@
 import { useSelector } from "react-redux";
 import { AppStore } from "../redux/store";
 import { Navigate, Outlet } from "react-router-dom";
-import { PublicRoutes } from "../models";
+import { PrivateRoutes, PublicRoutes } from "../models";
 
-export const AuthGuard = () => {
+export const HomeGuard = () => {
   const userState = useSelector((store: AppStore) => store.api);
   console.log("user", userState);
-  return userState.id && userState.status === "Alive" ? (
+  return userState.id === 3 ? (
     <Outlet />
   ) : (
-    <Navigate replace to={PublicRoutes.LOGIN} />
+    <Navigate replace to={PrivateRoutes.DASHBOARD} />
   );
 };
 
-export default AuthGuard;
+export default HomeGuard;

@@ -1,9 +1,11 @@
 import axios from "axios";
 import { ApiType } from "../models";
 
-export const login = () => {
-  const morty = axios.get<ApiType>(
+export const login1 = () => {
+  const character1 = axios.get<ApiType>(
     "https://rickandmortyapi.com/api/character/2"
   );
-  return morty;
+  return character1;
 };
+
+//9
