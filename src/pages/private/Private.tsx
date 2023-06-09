@@ -1,8 +1,10 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { PrivateRoutes } from "../../models";
-import { Dashboard } from "./dashboard";
-import { Home } from "./home";
 import HomeGuard from "../../guards/home-guard";
+import { lazy } from "react";
+
+const Home = lazy(() => import("./home/Home"));
+const Dashboard = lazy(() => import("./dashboard/Dashboard"));
 
 
 export default function Private() {

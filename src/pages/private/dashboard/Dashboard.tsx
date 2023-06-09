@@ -13,7 +13,7 @@ export default function Dashboard() {
   return (
     <>
     <div>Dashboard</div>
-    {api.id === 3 ? <a href="/private/home">to home</a> : <p>Tu id no es el correcto</p>}
+    {api.id === 2 ? <a href="/private/home">to home</a> : <p>Tu id no es el correcto</p>}
     <button onClick={logout}>Logout</button>
     </>
   )

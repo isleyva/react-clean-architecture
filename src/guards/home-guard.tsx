@@ -6,7 +6,7 @@ import { PrivateRoutes, PublicRoutes } from "../models";
 export const HomeGuard = () => {
   const userState = useSelector((store: AppStore) => store.api);
   console.log("user", userState);
-  return userState.id === 3 ? (
+  return userState.id === 2 ? (
     <Outlet />
   ) : (
     <Navigate replace to={PrivateRoutes.DASHBOARD} />
